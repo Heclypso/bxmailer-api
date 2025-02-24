@@ -31,7 +31,7 @@ export default async function handler(req, res) {
             from: `Bitmail <${process.env.NODEMAILER_MAIL}>`,
             to,
             subject,
-            text,
+            html: text,
         });
 
         return res.status(200).json({ message: "Email enviado com sucesso" });
